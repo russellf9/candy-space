@@ -1,4 +1,4 @@
-angular.module('gojimo.code-challenge', ['ui.router']).controller('Qualifications', Qualifications)
+angular.module('gojimo.code-challenge', ['ui.router', 'gojimo.code-challenge.qualifications']).controller('Qualifications', Qualifications)
 
 
 .config(['$stateProvider', '$urlRouterProvider',

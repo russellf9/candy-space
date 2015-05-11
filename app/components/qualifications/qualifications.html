@@ -1,3 +1,13 @@
-<div>
-    <p>qualifications</p>
+<div style="margin-left:100px;">
+    <h2>Qualifications:</h2>
+    <ul>
+        <li ng-repeat="qualification in data" ng-click="isSelected =! isSelected">
+            {{qualification.name}}
+            <!--{{qualification.subjects}}-->
+            <ul ng-show="isSelected" ng-repeat="subject in qualification.subjects">
+                <li>{{subject.title}}</li>
+            </ul>
+        </li>
+    </ul>
+
 </div>

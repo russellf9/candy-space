@@ -8,13 +8,12 @@
      * - informing when the data has been loaded
      * - informing when there has been an error when attempting to load the data
      */
-    function Qualifications($window, QualificationsService) {
+    function Qualifications(QualificationsService) {
 
         return {
             restrict: 'E',
             scope: {
-                // TODO - add the data here
-                //data: '=',
+                //data: '='
                 // TODO - add the appropriate `call back` functions here
                 //onRemoved: '&',
                 //onServed: '&'
@@ -22,12 +21,22 @@
             templateUrl: 'components/qualifications/qualifications.html',
             link: function(scope) {
 
-                // the function get the set of all food to order
-                QualificationsService.getQualifications().then(function(res) {
-                    console.log('results: ',res);
+                // the function get the set of all qualifications
+                QualificationsService.getQualifications().then(function(result) {
+                    console.log('results: ',result);
                     //scope.onReceived()();
-                    //scope.items = res;
+                    scope.data = result;
+                    console.log('len: ',scope.data.length);
+
                 });
+
+                // displays the subjects for the qualification selected
+                scope.select = function(index) {
+                    console.log('item: ', index, ' selected.');
+
+                };
+
+
 
             }
         }

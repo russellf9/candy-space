@@ -2,10 +2,10 @@
 
 describe("The Qualification Directive", function() {
 
-
     var element,   // our directive jqLite element
         scope,     // the scope where our directive is inserted
         compile,
+        service,
         url = 'https://api.gojimo.net/api/v4/qualifications',
         httpLocalBackend,
         httpResponse = [{
@@ -38,10 +38,11 @@ describe("The Qualification Directive", function() {
         // add the templates as js files
         module('templates');
 
-        inject(function(_$rootScope_, _$compile_, _$httpBackend_) {
+        inject(function(_$rootScope_, _$compile_, _$httpBackend_, QualificationsService) {
             compile = _$compile_;
             scope = _$rootScope_.$new();
             httpLocalBackend = _$httpBackend_;
+            service = QualificationsService;
 
             httpLocalBackend.expectGET(url).respond(200, httpResponse);
 
@@ -57,17 +58,24 @@ describe("The Qualification Directive", function() {
     describe('when the page compiles the Qualification Directive', function() {
 
         describe('the function to get the data', function() {
-            it('should have a method to getQualification', function() {
+            it('should have a Service to get the Qualifications', function() {
+                httpLocalBackend.whenGET(url).respond(200, httpResponse);
+               // httpLocalBackend.flush(); // NOTE this is causing an issue...
+
+                expect(scope).toBeDefined();
+                expect(service).toBeDefined();
+            });
+
+            it('should be able to get the Qualifications data', function() {
                 httpLocalBackend.whenGET(url).respond(200, httpResponse);
                 httpLocalBackend.flush();
 
-                expect(scope).toBeDefined();
+                service.getQualifications().then(function(result) {
+                    expect(result.length).toBe(2); // will match the number of items in the dummy data
 
-                //expect(scope.getQualifications).toBeDefined();
-            });
+                });
+                scope.$digest();
+            })
         });
-
     });
-
-
 });

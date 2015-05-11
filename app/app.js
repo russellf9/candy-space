@@ -1,4 +1,4 @@
-angular.module('healthyGulpAngularApp', ['ui.router'])
+angular.module('gojimo.code-challenge', ['ui.router'])
 
 .config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {

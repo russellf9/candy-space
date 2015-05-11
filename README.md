@@ -18,6 +18,8 @@ I've used the [healthy-gulp-angular](https://github.com/paislee/healthy-gulp-ang
 $ gulp watch-dev
 ```
 
+Open `http://localhost:8080/` in Chrome
+
 ## The Challenge
 
 Develop a very simple working application on your chosen platform

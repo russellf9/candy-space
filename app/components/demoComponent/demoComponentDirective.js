@@ -1,4 +1,4 @@
-angular.module('healthyGulpAngularApp')
+angular.module('gojimo.code-challenge')
 
 .directive('demoComponent', [function() {
         return {

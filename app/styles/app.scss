@@ -1,2 +1,51 @@
 @import "settings";
 @import "../../bower_components/foundation/scss/foundation";
+@import "colors";
+@import "palette";
+
+
+// app specific styles here
+
+body {
+  margin: 0.2em 0;
+  background: $offWhite;
+  color: $primary-text-color;
+  padding: 0.2em 0;
+}
+
+section {
+  padding: 0.5em;
+}
+
+.qualifications {
+  display: block;
+  padding-left: 2em;
+
+  ul {
+    list-style:none;
+    border-bottom: 1px solid $accent-color;
+  }
+
+  li {
+    padding-top: 0.5em;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+
+    border-bottom: 1px solid $accent-color;
+  }
+}
+
+.odd {
+  background-color: $primary-color;
+}
+.even {
+  background-color: $divider-color;
+}
+
+.active {
+  cursor: pointer;
+}
+
+.panel-body {
+  width: 50%;
+}

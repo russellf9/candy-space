@@ -21,8 +21,4 @@ function Qualifications($http) {
 
     var vm = this;
 
-    console.log('Qualifications!');
-
-    vm.name = 'russell';
-
 }

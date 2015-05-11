@@ -6,17 +6,14 @@
      * The <qualifications> directive is responsible for:
      * - reading the JSON feed
      * - informing when the data has been loaded
-     * - informing when there has been an error when attempting to load the data
+     * - informing when there has been an error when attempting to load the data - TODO
      */
     function Qualifications(QualificationsService) {
 
         return {
             restrict: 'E',
             scope: {
-                //data: '='
-                // TODO - add the appropriate `call back` functions here
-                //onRemoved: '&',
-                //onServed: '&'
+                // TODO - we could add the appropriate `call back` functions here to relate back to the Controller
             },
             templateUrl: 'components/qualifications/qualifications.html',
             link: function(scope) {
@@ -29,17 +26,8 @@
                     console.log('len: ',scope.data.length);
 
                 });
-
-                // displays the subjects for the qualification selected
-                scope.select = function(index) {
-                    console.log('item: ', index, ' selected.');
-
-                };
-
-
-
             }
-        }
+        };
     }
 
 })();

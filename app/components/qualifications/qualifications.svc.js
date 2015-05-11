@@ -28,7 +28,7 @@
 
                     localStorageService.set('qualifications', data);
                     _qualifications = data;
-                    
+
                     deferred.resolve(data);
                 }).error(function(data, status, headers, config) {
                     deferred.reject("Error: request returned status " + status);

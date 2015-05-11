@@ -3,7 +3,6 @@
 @import "colors";
 @import "palette";
 
-
 // app specific styles here
 
 body {
@@ -22,10 +21,10 @@ section {
   padding-left: 2em;
 
   ul {
-    list-style:none;
+    list-style: none;
     border-bottom: 1px solid $accent-color;
   }
-
+  //  style the list items so they stand out
   li {
     padding-top: 0.5em;
     padding-left: 1em;
@@ -35,17 +34,21 @@ section {
   }
 }
 
+// used for the alternate list items
 .odd {
   background-color: $primary-color;
 }
+
 .even {
   background-color: $divider-color;
 }
 
+// for active clickable items
 .active {
   cursor: pointer;
 }
 
+// so the list backgrounds don't stretch too far
 .panel-body {
   width: 50%;
 }

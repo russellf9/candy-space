@@ -4,8 +4,8 @@
         <li class="active" ng-repeat="qualification in data" ng-click="isSelected =! isSelected" ng-class-odd="'odd'" ng-class-even="'even'">
             {{qualification.name}}
             <!--{{qualification.subjects}}-->
-            <ul ng-show="isSelected" ng-repeat="subject in qualification.subjects">
-                <li >{{subject.title}}</li>
+            <ul ng-show="isSelected" ng-repeat="subject in qualification.subjects" ng-style="{'background-color':subject.colour}">
+                <li>{{subject.title}}</li>
             </ul>
         </li>
     </ul>

@@ -65,3 +65,6 @@ Whilst not essential, we will be very pleased to see you take the challenge furt
 4. Unit testing your code.
 
 
+### State of the test
+
+I've run through all the requirements except the unit testing, as I'm having to test Angular Directives I've got to set up a few more things, so I'll do that shortly!

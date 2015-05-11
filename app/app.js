@@ -1,4 +1,4 @@
-angular.module('gojimo.code-challenge', ['ui.router', 'gojimo.code-challenge.qualifications']).controller('Qualifications', Qualifications)
+angular.module('gojimo.code-challenge', ['ui.router', 'gojimo.code-challenge.qualifications', 'LocalStorageModule']).controller('Qualifications', Qualifications)
 
 
 .config(['$stateProvider', '$urlRouterProvider',
@@ -13,8 +13,12 @@ angular.module('gojimo.code-challenge', ['ui.router', 'gojimo.code-challenge.qua
                 templateUrl: 'components/home.html',
                 controllerAs: Qualifications
             });
+    }])
 
-    }]);
+.config(function (localStorageServiceProvider) {
+    localStorageServiceProvider
+        .setPrefix('gojimo.code-challenge');
+});
 
 
 function Qualifications($http) {

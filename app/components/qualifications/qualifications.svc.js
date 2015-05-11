@@ -6,16 +6,15 @@
     'use strict';
 
 
-    angular.module('gojimo.code-challenge.qualifications').service('QualificationsService',  ['$q', '$http', function($q, $http) {
+    angular.module('gojimo.code-challenge.qualifications').service('QualificationsService',  ['$q', '$http', 'localStorageService', function($q, $http, localStorageService) {
 
-        // use a data var to cache reference
-        var _qualifications = null,
+        // use local storage to cache reference
+        var _qualifications = localStorageService.get('qualifications'),
             url = 'https://api.gojimo.net/api/v4/qualifications';
 
         return {
 
             getQualifications: function() {
-
                 // There will always be a promise so always declare it.
                 var deferred = $q.defer();
 
@@ -26,7 +25,10 @@
                 }
                 // else- not in cache
                 $http.get(url).success(function(data){
+
+                    localStorageService.set('qualifications', data);
                     _qualifications = data;
+                    
                     deferred.resolve(data);
                 }).error(function(data, status, headers, config) {
                     deferred.reject("Error: request returned status " + status);

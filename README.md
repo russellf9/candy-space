@@ -67,4 +67,16 @@ Whilst not essential, we will be very pleased to see you take the challenge furt
 
 ### State of the test
 
-I've run through all the requirements except the unit testing, as I'm having to test Angular Directives I've got to set up a few more things, so I'll do that shortly!
+I've run through all the requirements including the unit testing.
+
+Possible improvements:
+
+* [ ] Improve the SASS palette to match the subject colours more.
+* [ ] Perhaps add a `+` icon on the qualification bar and limit the click to that asset
+* [ ] Disable the click when there are not qualifications, (Ie. the hand cursor will not be present for the SAT)
+* [ ] Add error handling for the API call
+* [ ] If no background colour is define in the api response use a light colour.
+
+### To run the Unit Test Suite:
+
+`gulp test`

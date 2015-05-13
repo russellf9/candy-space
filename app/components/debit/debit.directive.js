@@ -21,17 +21,29 @@
 
                 console.log('debit!');
 
-                // TODO plugin function
+                scope.withdraw = function() {
+                    console.log('withdraw: ', scope.amount);
+                    // check the value is a number
+                    var num = Number(scope.amount);
 
-                //// the function get the set of all qualifications
-                //Accounts.withdrawal(sum).then(function(result) {
-                //    console.log('results: ',result);
-                //    //scope.onReceived()();
-                //    scope.data = result;
-                //
-                //}, function(error) {
-                //    console.log('error: ',error);
-                //});
+                    if(isNaN(num)) {
+                        console.log('Error not a number!');
+                        scope.amount = '';
+                    } else {
+                        console.log('OK');
+
+                        Accounts.withdrawal(scope.amount).then(function(result) {
+                            console.log('results: ',result);
+                            //scope.onReceived()();
+                            scope.data = result;
+
+                        }, function(error) {
+                            console.log('error: ',error);
+                        });
+                    }
+
+                };
+
             }
         };
     }

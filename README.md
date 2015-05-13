@@ -50,7 +50,7 @@ The final code doesn't need to process any data, or interact with an API but bon
 
 The code for this challenge should be submitted via a Codepen.
 
-**For my pen see: [pen](http://codepen.io/anon/pen/qdZdag) **
+### For my pen see: [pen](http://codepen.io/anon/pen/qdZdag)
 
 ## Challenge 2 - A simple wallet application using Angular.js
 

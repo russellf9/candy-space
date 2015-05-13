@@ -1,4 +1,4 @@
-angular.module('gojimo.code-challenge', ['ui.router', 'gojimo.code-challenge.qualifications', 'LocalStorageModule']).controller('Qualifications', Qualifications)
+angular.module('wallet-app', ['ui.router', 'wallet-app.total', 'LocalStorageModule']).controller('Wallet', Wallet)
 
 
 .config(['$stateProvider', '$urlRouterProvider',
@@ -11,18 +11,21 @@ angular.module('gojimo.code-challenge', ['ui.router', 'gojimo.code-challenge.qua
             .state('home', {
                 url: '/',
                 templateUrl: 'components/home.html',
-                controllerAs: Qualifications
+                controllerAs: Wallet
             });
     }])
 
 .config(function (localStorageServiceProvider) {
     localStorageServiceProvider
-        .setPrefix('gojimo.code-challenge');
+        .setPrefix('wallet-app');
 });
 
+//angular.module('wallet-app.total', []);
 
-function Qualifications($http) {
+
+function Wallet($http) {
 
     var vm = this;
+    console.log('Wallet!')
 
 }

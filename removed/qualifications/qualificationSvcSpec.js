@@ -29,7 +29,7 @@ describe("The Qualification Service", function() {
     beforeEach(function() {
 
         // add the app module
-        module('gojimo.code-challenge');
+        module('wallet-app');
 
         module('LocalStorageModule');
 

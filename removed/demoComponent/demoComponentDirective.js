@@ -1,4 +1,4 @@
-angular.module('gojimo.code-challenge')
+angular.module('wallet-app')
 
 .directive('demoComponent', [function() {
         return {

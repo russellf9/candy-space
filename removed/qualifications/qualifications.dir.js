@@ -1,5 +1,5 @@
 (function() {
-    angular.module('gojimo.code-challenge.qualifications', [])
+    angular.module('wallet-app.qualifications', [])
         .directive('qualifications', Qualifications);
 
     /**

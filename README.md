@@ -1,4 +1,4 @@
-This is a project for the Gojimo Code Challenge
+This is a project for the Energy Aspects Code Challenge
 
 
 ## Installation

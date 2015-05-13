@@ -6,7 +6,7 @@
     'use strict';
 
 
-    angular.module('gojimo.code-challenge.qualifications').service('QualificationsService',  ['$q', '$http', 'localStorageService', function($q, $http, localStorageService) {
+    angular.module('wallet-app.qualifications').service('QualificationsService',  ['$q', '$http', 'localStorageService', function($q, $http, localStorageService) {
 
         // use local storage to cache reference
         var _qualifications = localStorageService.get('qualifications'),

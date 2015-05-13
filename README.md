@@ -20,62 +20,64 @@ $ gulp watch-dev
 
 Open `http://localhost:8080/` in Chrome
 
-## The Challenge
+## Energy Aspects Front End Developer Code Challenges
 
-Develop a very simple working application on your chosen platform
-(Android / iOS / Web) with the following functionality:
+There are two code separate challenges, both of which we require you to complete. Code for the second challenge should be submitted via a  Git repository. Ideally we would like to see how you got to the end result via a series of commits as opposed to one large commit.
+ >
+There is no time limit for each challenge, but please notify us of the time worked on each challenge so that we can correlate if there are any large gaps in commit messages.
 
-1.  Read the following JSON feed containing a list of qualifications (a
-    sample is presented below for your reference):
-    https://api.gojimo.net/api/v4/qualifications
+Your code will be judged on implementation, and style. **Challenge 1)
+** Recreate this widget using HTML and CSS.**
+[http://codepen.io/energyaspects/pen/XbWQbx](http://codepen.io/energyaspects/pen/XbWQbx)
 
-2.  Display a list of qualifications based on the data provided by the
-    feed.
+he final code doesn't need to process any data, or interact with an API but bonus points will be awarded for any additional functionality, or improvements that are added (simple client-side validation with feedback, for example).
 
-3.  Allow users to click a qualification to be presented with a list of
-    subjects for that qualification.
+![](media/image2.jpeg)
 
-```
-{
-    id: "d45945e4-b724-48ab-9f99-21e61f1648ad",
-    name: "11+ Common Entrance", subjects: [
-    {
-        id: "ef319206-aa64-41f5-ac67-17a4fb8d10f6",
-        title: "English",
-        link: "/api/v4/subjects/ef319206-aa64-41f5-ac67-17a4fb8d10f6",
-        colour: "\#ECF7E2"
-    }],
-    default_products: [ ],
-    created_at: "2014-04-12T10:06:33.000Z", updated\_at:
-    "2014-04-12T10:06:33.000Z",
-    link: "/api/v4/qualifications/d45945e4-b724-48ab-9f99-21e61f1648ad"
-}
-```
+The code for this challenge should be submitted via a Codepen.
+
+## Challenge 2) A simple wallet application using Angular.js
+
+our task is to create a simple wallet application that allows you to add and remove amounts to and from your wallet. Once a deposit or withdrawal takes place, it should be listed along with the date and time the transaction took place.
+ >
+The wallet should show a total, displaying how much money is currently in the wallet.
+
+### Instructions
+
+
+1. The JavaScript logic should be built on Angular.js
+
+2. The input to deposit or withdraw an amount should have error checking and reporting.
+
+3. The wallet should not be able to have a negative balance.
+
+4. The wallet data should persist on page refresh, until the user presses a ‘reset’ button, which will clear the wallet’s total and transactions. You can choose the persistence method.
+
+5. The code should be hosted in a Git repository.
+
+6.  The method of adding or removing a value to the wallet can be via  separate inputs, or a single input with a select box for add/remove.
+
 
 ### BONUS POINTS
 
-Whilst not essential, we will be very pleased to see you take the challenge further by:
+-   Consider how large numbers of transactions will be handled. For  example, if a wallet was created a year ago, it could have hundreds, or thousands of deposits and withdrawals. How could these be displayed?
 
-1. Using the data provided to its full potential by taking advantage of fields like colour for subjects.
+-   Users may be able to have more than one wallet, with different currencies. How would these work, and be presented to the user?
 
-2. Making the GUI as appealing and responsive as possible.
+-  Thinking of a typical bank or credit card organisation, many accounts will exist for many different users. External companies can make charge requests against each account, and transfers can be made between internal accounts. How could your application implement this?
 
-3. Storing the data locally and refresh from the server as requested, taking advantage of the HTTP headers to avoid downloads of non-stale data.
+ Although this is a fairly entry-level exercise, we’ll be paying close attention to the style of your code, as well as its implementation, with extra marks being awarded for the bonus points above, consideration for the application’s appearance, UX and any intuitive extra features.
 
-4. Unit testing your code.
+ That being said, it doesn’t need to be a production ready, piece of art. Good luck!
+
+
 
 
 ### State of the test
 
-I've run through all the requirements including the unit testing.
 
-Possible improvements:
+* [ ]
 
-* [ ] Improve the SASS palette to match the subject colours more.
-* [ ] Perhaps add a `+` icon on the qualification bar and limit the click to that asset
-* [ ] Disable the click when there are not qualifications, (Ie. the hand cursor will not be present for the SAT)
-* [ ] Add error handling for the API call
-* [ ] If no background colour is define in the api response use a light colour.
 
 ### To run the Unit Test Suite:
 

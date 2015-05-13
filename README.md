@@ -52,7 +52,7 @@ The code for this challenge should be submitted via a Codepen.
 
 For my pen see: [pen](http://codepen.io/anon/pen/qdZdag)
 
-## Challenge 2) A simple wallet application using Angular.js
+## Challenge 2 - A simple wallet application using Angular.js
 
 our task is to create a simple wallet application that allows you to add and remove amounts to and from your wallet. Once a deposit or withdrawal takes place, it should be listed along with the date and time the transaction took place.
  >
@@ -90,9 +90,9 @@ The wallet should show a total, displaying how much money is currently in the wa
 
 ### APP SCOPE
 
-– Wallet - the 'main' Controller, responsible for the top-level of the app
+- Wallet - the 'main' Controller, responsible for the top-level of the app
 
-– Total - a Directive which is responsible for displaying the total of the Account
+- Total - a Directive which is responsible for displaying the total of the Account
 
 - Account - a Service which is responsible for handling all Credits and Debits
 
@@ -108,9 +108,9 @@ The wallet should show a total, displaying how much money is currently in the wa
 
 ### State of the test
 
-* [Add Transactions]
+* [ ] Add Transactions
 
-* [Add Tests]
+* [ ] Add Tests
 
 
 ### To run the Unit Test Suite: (TODo)

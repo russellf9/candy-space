@@ -26,7 +26,7 @@
                 } else {
                     // else- not in cache
                     // set the total to zero
-                    var accounts = {total:0};
+                    var accounts = {total: 0};
                     localStorageService.set('accounts', accounts);
                     _accounts = localStorageService.get('accounts');
 
@@ -46,7 +46,8 @@
 
                     var total = _accounts.total - sum;
 
-                    localStorageService.set('accounts', {total:total});
+                    localStorageService.set('accounts', {total: total});
+                    _accounts = localStorageService.get('accounts');
 
                     // TODO handle error here...
                     deferred.resolve(_accounts.total);
@@ -67,7 +68,8 @@
 
                     var total = _accounts.total + sum;
 
-                    localStorageService.set('accounts', {total:total});
+                    localStorageService.set('accounts', {total: total});
+                    _accounts = localStorageService.get('accounts');
 
                     // TODO handle error here...
                     deferred.resolve(_accounts.total);
@@ -86,7 +88,8 @@
 
                 if (_accounts) {
 
-                    localStorageService.set('accounts', {total:0});
+                    localStorageService.set('accounts', {total: 0});
+                    _accounts = localStorageService.get('accounts');
 
                     // TODO handle error here...
                     deferred.resolve(_accounts);
@@ -99,9 +102,18 @@
 
                 return deferred.promise;
 
+            },
+            getAccounts : function() {
+                return _accounts
+
             }
-        };
-        // TODO set the data
-        //  localStorageService.set('accounts', data);
-    }]);
-}());
+    };
+    // TODO set the data
+    //  localStorageService.set('accounts', data);
+}
+])
+;
+}
+()
+)
+;

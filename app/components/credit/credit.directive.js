@@ -15,6 +15,7 @@
             restrict: 'EA',
             scope: {
                 // TODO - we could add the appropriate `call back` functions here to relate back to the Controller
+                update: '&'
             },
             templateUrl: 'components/credit/credit.html',
             link: function(scope) {
@@ -34,6 +35,8 @@
                             console.log('results: ',result);
                             //scope.onReceived()();
                             scope.data = result;
+
+                            scope.update()(result);
 
                         }, function(error) {
                             console.log('error: ',error);

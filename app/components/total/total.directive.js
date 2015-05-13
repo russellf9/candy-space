@@ -9,8 +9,7 @@
      * - informing when there has been an error when attempting to load the data - TODO
      */
 
-    // todo add - AccountService
-    function Total(Accounts) {
+    function Total(Accounts, $rootScope) {
 
         return {
             restrict: 'E',
@@ -19,8 +18,6 @@
             },
             templateUrl: 'components/total/total.html',
             link: function(scope) {
-
-                console.log('total!');
 
                 // the function get the set of all qualifications
                 Accounts.getTotal().then(function(result) {
@@ -32,6 +29,26 @@
                 }, function(error) {
                     console.log('error: ',error);
                 });
+
+                // watch for updates sent by the controller
+                //  TODO we are trusting the data in the call use the getTotal function!
+                $rootScope.$on('Accounts::Update', function(event, result) {
+                    scope.data = result;
+                });
+
+
+
+                // CANT GET THIS TO WORK :-(
+                // Watch for changes in the service
+                scope.$watch(function(){
+                    return Accounts.getAccounts;
+                }, function(newVal, oldVal){
+
+                    if(newVal) Accounts.getAccounts(function(response){
+                        console.log('response: ',response);
+                        scope.data = response;
+                    });
+                })
             }
         };
     }

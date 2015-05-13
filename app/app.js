@@ -21,9 +21,16 @@ angular.module('wallet-app', ['ui.router', 'wallet-app.total', 'wallet-app.accou
 });
 
 
-function Wallet($http) {
+function Wallet($rootScope) {
 
     var vm = this;
     console.log('Wallet!')
+
+    this.update = function(sum) {
+
+        console.log('update! ',sum);
+
+        $rootScope.$emit('Accounts::Update', sum);
+    }
 
 }

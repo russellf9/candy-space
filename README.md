@@ -44,7 +44,7 @@ Your code will be judged on implementation, and style.
 ** Recreate this widget using HTML and CSS.**
 [http://codepen.io/energyaspects/pen/XbWQbx](http://codepen.io/energyaspects/pen/XbWQbx)
 
-he final code doesn't need to process any data, or interact with an API but bonus points will be awarded for any additional functionality, or improvements that are added (simple client-side validation with feedback, for example).
+The final code doesn't need to process any data, or interact with an API but bonus points will be awarded for any additional functionality, or improvements that are added (simple client-side validation with feedback, for example).
 
 ![](media/image2.jpeg)
 
@@ -82,9 +82,9 @@ The wallet should show a total, displaying how much money is currently in the wa
 
 -  Thinking of a typical bank or credit card organisation, many accounts will exist for many different users. External companies can make charge requests against each account, and transfers can be made between internal accounts. How could your application implement this?
 
- Although this is a fairly entry-level exercise, we’ll be paying close attention to the style of your code, as well as its implementation, with extra marks being awarded for the bonus points above, consideration for the application’s appearance, UX and any intuitive extra features.
+-  Although this is a fairly entry-level exercise, we’ll be paying close attention to the style of your code, as well as its implementation, with extra marks being awarded for the bonus points above, consideration for the application’s appearance, UX and any intuitive extra features.
 
- That being said, it doesn’t need to be a production ready, piece of art. Good luck!
+-  That being said, it doesn't need to be a production ready, piece of art. Good luck!
 
 
 
@@ -108,11 +108,15 @@ The wallet should show a total, displaying how much money is currently in the wa
 
 ### State of the test
 
+I've used Twitter bootstrap to style the app and for the data persistence i've used local storage.
+
 * [ ] Add Transactions
 
 * [ ] Add Tests
 
+* [ ] Add different currencies
 
-### To run the Unit Test Suite: (TODo)
+
+### To run the Unit Test Suite: (TODO)
 
 `gulp test`

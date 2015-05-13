@@ -84,9 +84,23 @@ The wallet should show a total, displaying how much money is currently in the wa
 
 
 
+### APP SCOPE
+
+– Wallet - the 'main' Controller, responsible for the top-level of the app
+
+– Total - a Directive which is responsible for displaying the total of the Account
+
+- Account - a Service which is responsible for handling all Credits and Debits
+
+- Debit - a Directive which is responsible for the user action of making a withdrawal
+
+- Credit - A Directive which is responsible for the user action of making a deposit
+
+- Reset -  A Directive which is responsible for clearing all the Balance and all the recorded Transactions
+
+
 
 ### State of the test
-
 
 * [ ]
 

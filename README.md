@@ -38,7 +38,9 @@ There are two code separate challenges, both of which we require you to complete
  >
 There is no time limit for each challenge, but please notify us of the time worked on each challenge so that we can correlate if there are any large gaps in commit messages.
 
-Your code will be judged on implementation, and style. **Challenge 1)
+Your code will be judged on implementation, and style.
+
+## Challenge 1
 ** Recreate this widget using HTML and CSS.**
 [http://codepen.io/energyaspects/pen/XbWQbx](http://codepen.io/energyaspects/pen/XbWQbx)
 
@@ -47,6 +49,8 @@ he final code doesn't need to process any data, or interact with an API but bonu
 ![](media/image2.jpeg)
 
 The code for this challenge should be submitted via a Codepen.
+
+For my pen see: [pen](http://codepen.io/anon/pen/qdZdag)
 
 ## Challenge 2) A simple wallet application using Angular.js
 
@@ -98,13 +102,17 @@ The wallet should show a total, displaying how much money is currently in the wa
 
 - Reset -  A Directive which is responsible for clearing all the Balance and all the recorded Transactions
 
+- Transactions - Displays all the users transactions
+
 
 
 ### State of the test
 
-* [ ]
+* [Add Transactions]
+
+* [Add Tests]
 
 
-### To run the Unit Test Suite:
+### To run the Unit Test Suite: (TODo)
 
 `gulp test`

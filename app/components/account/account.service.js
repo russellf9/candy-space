@@ -86,7 +86,7 @@
 
                 if (_accounts) {
 
-                    localStorageService.set('accounts', {});
+                    localStorageService.set('accounts', {total:0});
 
                     // TODO handle error here...
                     deferred.resolve(_accounts);

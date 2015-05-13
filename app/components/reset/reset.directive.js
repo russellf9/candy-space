@@ -19,18 +19,19 @@
             templateUrl: 'components/reset/reset.html',
             link: function(scope) {
 
-                console.log('reset!');
-                //TODO plugin function
+                scope.reset = function() {
+                    console.log('reset');
 
-                // the function to plugin
-                //Accounts.reset().then(function(result) {
-                //    console.log('results: ',result);
-                //    //scope.onReceived()();
-                //    scope.data = result;
-                //
-                //}, function(error) {
-                //    console.log('error: ',error);
-                //});
+                    Accounts.reset().then(function(result) {
+                        console.log('results: ', result);
+                        //scope.onReceived()();
+                        scope.data = result;
+
+                    }, function(error) {
+                        console.log('error: ', error);
+                    });
+
+                };
             }
         };
     }

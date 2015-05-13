@@ -12,6 +12,18 @@ I've used the [healthy-gulp-angular](https://github.com/paislee/healthy-gulp-ang
 
 (The original healthy-gulp-angular README can be found here: [healthy-angular-README.md](healthy-angular-README.md) )
 
+**Note:**
+
+One first launch after forking this repo I encountered an few errors''
+
+```
+Error: Cannot find module 'gulp-karma'
+
+# ran
+$ npm install --save-dev gulp-karma
+
+```
+
 ## Running the app
 
 ```

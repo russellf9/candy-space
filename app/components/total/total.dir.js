@@ -10,7 +10,7 @@
      */
 
     // todo add - AccountService
-    function Total() {
+    function Total(Accounts) {
 
         return {
             restrict: 'E',
@@ -20,16 +20,18 @@
             templateUrl: 'components/total/total.html',
             link: function(scope) {
 
-                console.log('total!')
+                console.log('total!');
 
                 // the function get the set of all qualifications
-                //AccountService.getTotal().then(function(result) {
-                //    console.log('results: ',result);
-                //    //scope.onReceived()();
-                //    scope.data = result;
-                //    console.log('len: ',scope.data.length);
-                //
-                //});
+                Accounts.getTotal().then(function(result) {
+                    console.log('results: ',result);
+                    //scope.onReceived()();
+                    scope.data = result;
+                    console.log('len: ',scope.data.length);
+
+                }, function(error) {
+                    console.log('error: ',error);
+                });
             }
         };
     }

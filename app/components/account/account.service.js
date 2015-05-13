@@ -72,6 +72,26 @@
 
                 return deferred.promise;
 
+            },
+            reset: function() {
+
+                var deferred = $q.defer();
+
+                if (_accounts) {
+
+                    localStorageService.set('accounts', {});
+
+                    // TODO handle error here...
+                    deferred.resolve(_accounts);
+
+                    return deferred.promise;
+                } else {
+                    // else- not in cache
+                    deferred.reject("Error: no data as yet ");
+                }
+
+                return deferred.promise;
+
             }
         };
         // TODO set the data

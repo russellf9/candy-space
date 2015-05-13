@@ -1,4 +1,4 @@
-angular.module('wallet-app', ['ui.router', 'wallet-app.total', 'wallet-app.accounts', 'wallet-app.debit', 'wallet-app.credit', 'LocalStorageModule']).controller('Wallet', Wallet)
+angular.module('wallet-app', ['ui.router', 'wallet-app.total', 'wallet-app.accounts', 'wallet-app.debit', 'wallet-app.credit', 'wallet-app.reset', 'LocalStorageModule']).controller('Wallet', Wallet)
 
 
 .config(['$stateProvider', '$urlRouterProvider',

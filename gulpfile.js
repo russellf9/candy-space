@@ -10,7 +10,7 @@ var karma = require('gulp-karma');
 // == PATH STRINGS ========
 
 var paths = {
-    scripts: ['./app/**/*.js', '!app/**/*Spec.js' ],
+    scripts: ['./app/**/app.js', './app/**/*.js', '!app/**/*Spec.js' ],
     styles: ['./app/**/*.css'], //angular.module('wallet-app.total')
     images: './images/**/*',
     index: './app/index.html',

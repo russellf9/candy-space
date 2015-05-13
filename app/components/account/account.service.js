@@ -15,7 +15,7 @@
 
             getTotal: function() {
 
-                console.log('getTotal')
+                console.log('getTotal');
                 // There will always be a promise so always declare it.
                 var deferred = $q.defer();
 
@@ -29,6 +29,28 @@
                 }
 
                 return deferred.promise;
+            },
+
+            withdrawal: function(sum) {
+
+                var deferred = $q.defer();
+
+                if (_accounts) {
+
+                    var total = _accounts.total - sum;
+
+                    localStorageService.set('accounts', {total:total});
+
+                    // TODO handle error here...
+                    deferred.resolve(_accounts.total);
+                    return deferred.promise;
+                } else {
+                    // else- not in cache
+                    deferred.reject("Error: no data as yet ");
+                }
+
+                return deferred.promise;
+
             }
         };
         // TODO set the data

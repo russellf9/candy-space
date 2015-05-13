@@ -1,4 +1,4 @@
-angular.module('wallet-app', ['ui.router', 'wallet-app.total', 'wallet-app.accounts', 'LocalStorageModule']).controller('Wallet', Wallet)
+angular.module('wallet-app', ['ui.router', 'wallet-app.total', 'wallet-app.accounts', 'wallet-app.debit', 'LocalStorageModule']).controller('Wallet', Wallet)
 
 
 .config(['$stateProvider', '$urlRouterProvider',
@@ -21,6 +21,7 @@ angular.module('wallet-app', ['ui.router', 'wallet-app.total', 'wallet-app.accou
 });
 
 //angular.module('wallet-app.total', []);
+
 
 
 function Wallet($http) {

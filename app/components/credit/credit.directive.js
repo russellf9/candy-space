@@ -32,7 +32,7 @@
                         console.log('OK');
 
                         Accounts.deposit(scope.amount).then(function(result) {
-                            console.log('results: ',result);
+                            console.log('credit::results: ',result);
                             //scope.onReceived()();
                             scope.data = result;
 

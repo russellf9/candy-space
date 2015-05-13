@@ -56,8 +56,8 @@
                     // add transaction
                     var date = new Date();
                     var transaction = {type:'debit', date:date, amount:sum};
-                    _accounts.transactions.push(transaction);
-                    _accounts = localStorageService.set('accounts', _accounts);
+                    //_accounts.transactions.push(transaction);
+                    //_accounts = localStorageService.set('accounts', _accounts); ?
 
                     // TODO handle error here...
                     deferred.resolve(_accounts.total);
@@ -78,19 +78,19 @@
 
                     var total = _accounts.total + sum;
 
-                    localStorageService.set('accounts', {total: total});
+                    localStorageService.set('accounts', {total: total}); // this would cause the transactions to be trashed!
                     _accounts = localStorageService.get('accounts');
 
                     // add transaction
                     var date = new Date();
                     var transaction = {type:'deposit', date:date, amount:sum};
 
-                    console.log('_accounts: ', _accounts)
+                    console.log('_accounts: ', _accounts);
                     if(!_accounts.transactions) {
                         _accounts.transactions = [];
                     }
-                    _accounts.transactions.push(transaction);
-                    _accounts = localStorageService.set('accounts', _accounts);
+                   // _accounts.transactions.push(transaction);
+                    //_accounts = localStorageService.set('accounts', _accounts); ??
 
                     // TODO handle error here...
                     deferred.resolve(_accounts.total);

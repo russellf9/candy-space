@@ -28,7 +28,7 @@ function Wallet($rootScope) {
 
     this.update = function(sum) {
 
-        console.log('update! ',sum);
+        console.log('controller update! ',sum);
 
         $rootScope.$emit('Accounts::Update', sum);
     }

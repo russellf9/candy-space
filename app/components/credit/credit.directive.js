@@ -18,19 +18,40 @@
             },
             templateUrl: 'components/credit/credit.html',
             link: function(scope) {
+                // makes the call to deposit the current amount into the account
+                scope.deposit = function() {
+                    console.log('deposit: ', scope.amount);
+                    // check the value is a number
+                    var num = Number(scope.amount);
+
+                    if(isNaN(num)) {
+                        console.log('Error not a number!');
+                        scope.amount = '';
+                    } else {
+                        console.log('OK');
+
+                        Accounts.deposit(scope.amount).then(function(result) {
+                            console.log('results: ',result);
+                            //scope.onReceived()();
+                            scope.data = result;
+
+                        }, function(error) {
+                            console.log('error: ',error);
+                        });
+                    }
+
+                };
+                // an item has been selected
+                scope.selectItem = function(id) {
+                    //console.log('menu::selectItem: ',id);
+                    scope.onSelect()(id);
+                };
 
                 console.log('credit!');
                 //TODO plugin function
 
                 // the function get the set of all qualifications
-                //Accounts.deposit(sum).then(function(result) {
-                //    console.log('results: ',result);
-                //    //scope.onReceived()();
-                //    scope.data = result;
-                //
-                //}, function(error) {
-                //    console.log('error: ',error);
-                //});
+
             }
         };
     }

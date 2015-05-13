@@ -1,4 +1,22 @@
-<div>
-    <p>This will have the UI to credit the account</p>
+<div style="credit">
 
+    <form name="myForm" class="form-inline">
+        <div class="form-group">
+            <label class="sr-only" for="deposit">Amount (in GBP)</label>
+
+            <div class="input-group">
+                <div class="input-group-addon">£</div>
+                <input type="number" min="1" class="form-control" ng-model="amount" id="deposit" placeholder="Amount">
+
+                <div class="input-group-addon">.00</div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" ng-click="deposit()">Deposit cash</button>
+        <div role="alert">
+    <span class="error" ng-show="myForm.input.$error.required">
+      Required!</span>
+    <span class="error" ng-show="myForm.input.$error.number">
+      Not valid number!</span>
+        </div>
+    </form>
 </div>

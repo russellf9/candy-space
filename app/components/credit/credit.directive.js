@@ -1,6 +1,6 @@
 (function() {
-    angular.module('wallet-app.debit', [])
-        .directive('debit', Debit);
+    angular.module('wallet-app.credit', [])
+        .directive('credit', Credit);
 
     /**
      * The <Debit> directive is responsible for:
@@ -9,22 +9,21 @@
      * - informing when there has been an error when attempting to load the data - TODO
      */
 
-    function Debit(Accounts) {
+    function Credit(Accounts) {
 
         return {
             restrict: 'EA',
             scope: {
                 // TODO - we could add the appropriate `call back` functions here to relate back to the Controller
             },
-            templateUrl: 'components/debit/debit.html',
+            templateUrl: 'components/credit/credit.html',
             link: function(scope) {
 
-                console.log('debit!');
+                console.log('credit!');
+                //TODO plugin function
 
-                // TODO plugin function
-
-                //// the function get the set of all qualifications
-                //Accounts.withdrawal(sum).then(function(result) {
+                // the function get the set of all qualifications
+                //Accounts.deposit(sum).then(function(result) {
                 //    console.log('results: ',result);
                 //    //scope.onReceived()();
                 //    scope.data = result;

@@ -24,8 +24,6 @@
                     console.log('results: ',result);
                     //scope.onReceived()();
                     scope.data = result;
-                    console.log('len: ',scope.data.length);
-
                 }, function(error) {
                     console.log('error: ',error);
                 });

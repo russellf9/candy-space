@@ -1,4 +1,4 @@
-angular.module('wallet-app', ['ui.router', 'wallet-app.total', 'wallet-app.accounts', 'wallet-app.debit', 'wallet-app.credit', 'wallet-app.reset', 'LocalStorageModule']).controller('Wallet', Wallet)
+angular.module('wallet-app', ['ui.router', 'wallet-app.total', 'wallet-app.accounts', 'wallet-app.debit', 'wallet-app.credit', 'wallet-app.reset', 'wallet-app.transactions', 'LocalStorageModule']).controller('Wallet', Wallet)
 
 
 .config(['$stateProvider', '$urlRouterProvider',
@@ -24,7 +24,7 @@ angular.module('wallet-app', ['ui.router', 'wallet-app.total', 'wallet-app.accou
 function Wallet($rootScope) {
 
     var vm = this;
-    console.log('Wallet!')
+    console.log('Wallet!');
 
     this.update = function(sum) {
 

@@ -14,7 +14,7 @@
         return {
             restrict: 'EA',
             scope: {
-                // TODO - we could add the appropriate `call back` functions here to relate back to the Controller
+                update: '&'
             },
             templateUrl: 'components/reset/reset.html',
             link: function(scope) {
@@ -24,7 +24,7 @@
 
                     Accounts.reset().then(function(result) {
                         console.log('results: ', result);
-                        //scope.onReceived()();
+                        scope.update()(result.total);
                         scope.data = result;
 
                     }, function(error) {

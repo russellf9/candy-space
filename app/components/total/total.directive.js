@@ -33,6 +33,7 @@
                 // watch for updates sent by the controller
                 //  TODO we are trusting the data in the call use the getTotal function!
                 $rootScope.$on('Accounts::Update', function(event, result) {
+                    console.log('update in total directive: ',result);
                     scope.data = result;
                 });
 

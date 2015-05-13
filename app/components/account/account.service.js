@@ -25,7 +25,14 @@
                     return deferred.promise;
                 } else {
                     // else- not in cache
-                    deferred.reject("Error: no data as yet ");
+                    // set the total to zero
+                    var accounts = {total:0};
+                    localStorageService.set('accounts', accounts);
+                    _accounts = localStorageService.get('accounts');
+
+                    deferred.resolve(_accounts.total);
+
+                    //deferred.reject("Error: no data as yet ");
                 }
 
                 return deferred.promise;

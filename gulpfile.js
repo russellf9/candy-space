@@ -11,7 +11,7 @@ var karma = require('gulp-karma');
 
 var paths = {
     scripts: ['./app/**/app.js', './app/**/*.js', '!app/**/*Spec.js' ],
-    styles: ['./app/**/*.css'], //angular.module('wallet-app.total')
+    styles: ['./app/**/*.css', './app/**/*.scss'],
     images: './images/**/*',
     index: './app/index.html',
     partials: ['app/**/*.html', '!app/index.html'],

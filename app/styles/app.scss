@@ -51,5 +51,14 @@ section {
 
 // so the list backgrounds don't stretch too far
 .panel-body {
-  width: 50%;
+  width: 75%;
+}
+
+//TOTAL
+
+.total {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  //border: solid 1px $primary-color;
 }

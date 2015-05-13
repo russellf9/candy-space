@@ -3,8 +3,8 @@
         .directive('credit', Credit);
 
     /**
-     * The <Debit> directive is responsible for:
-     * - displaying the UI to make withdrawals from the account
+     * The <Credit> directive is responsible for:
+     * - displaying the UI to make deposits to the account
      * - informing when the data has been loaded or updated (perhaps)
      * - informing when there has been an error when attempting to load the data - TODO
      */

@@ -4,7 +4,7 @@
 
     /**
      * The <Reset> directive is responsible for:
-     * - displaying the UI to make reset from the account
+     * - displaying the UI to make the call to reset the account
      * - informing when the data has been loaded or updated (perhaps)
      * - informing when there has been an error when attempting to load the data - TODO
      */

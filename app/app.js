@@ -20,9 +20,6 @@ angular.module('wallet-app', ['ui.router', 'wallet-app.total', 'wallet-app.accou
         .setPrefix('wallet-app');
 });
 
-//angular.module('wallet-app.total', []);
-
-
 
 function Wallet($http) {
 

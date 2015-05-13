@@ -1,6 +1,6 @@
 // the Service for the Accounts
 
-// A service responsible for all calls to the back-end to get menu data
+// A service responsible for CRUD operations on the Account
 (function() {
 
     'use strict';

@@ -21,31 +21,21 @@
                 _accounts = localStorageService.get('accounts');
 
                 console.log('\n----\nAccounts::getTotal | _accounts: ', _accounts, '\n----\n');
-                if (!_accounts.transactions) {
-                    _accounts.transactions = [];
+
+                // if the initial value is null reset to the default
+                if (!_accounts) {
+                    console.log('no accounts!');
+                    _accounts = {total: 0, transactions: []};
+                    localStorageService.set('accounts', _accounts);
                 }
                 // There will always be a promise so always declare it.
                 var deferred = $q.defer();
 
-                if (_accounts) {
-                    // Resolve the deferred $q object before returning the promise
-                    deferred.resolve(_accounts.total);
-                    return deferred.promise;
-                } else {
-                    // else- not in cache
-
-                    // TODO make shared function
-                    // set the total to zero
-                    var accounts = {total: 0, transactions: []};
-                    localStorageService.set('accounts', accounts);
-                    _accounts = localStorageService.get('accounts');
-
-                    deferred.resolve(_accounts.total);
-
-                    //deferred.reject("Error: no data as yet ");
-                }
+                // Resolve the deferred $q object before returning the promise
+                deferred.resolve(_accounts.total);
 
                 return deferred.promise;
+
             },
 
             withdrawal: function(sum) {
@@ -65,7 +55,7 @@
                     var date = new Date();
                     var transaction = {type: 'debit', date: date, amount: sum, total: _accounts.total};
                     _accounts.transactions.push(transaction);
-                    _accounts = localStorageService.set('accounts', _accounts);
+                    localStorageService.set('accounts', _accounts);
 
                     // TODO handle error here...
                     deferred.resolve(_accounts.total);
@@ -118,7 +108,12 @@
 
                 if (_accounts) {
                     // TODO create shared function
-                    localStorageService.set('accounts', {total: 0, transactions: []});
+                    //localStorageService.set('accounts', {total: 0, transactions: []});
+
+                    // try removing
+                    localStorageService.remove('accounts');
+
+
                     _accounts = localStorageService.get('accounts');
 
                     // TODO handle error here...

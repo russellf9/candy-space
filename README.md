@@ -24,6 +24,13 @@ $ npm install --save-dev gulp-karma
 
 ```
 
+
+## Live site
+
+I've pushed the app to my website see: [my-wallet](http://factornine.co.uk/my-wallet/)
+
+
+
 ## Running the app
 
 ```
@@ -41,8 +48,11 @@ There is no time limit for each challenge, but please notify us of the time work
 Your code will be judged on implementation, and style.
 
 ## Challenge 1
-** Recreate this widget using HTML and CSS.**
-[http://codepen.io/energyaspects/pen/XbWQbx](http://codepen.io/energyaspects/pen/XbWQbx)
+
+
+**Recreate this widget using HTML and CSS.**
+
+- [http://codepen.io/energyaspects/pen/XbWQbx](http://codepen.io/energyaspects/pen/XbWQbx)
 
 The final code doesn't need to process any data, or interact with an API but bonus points will be awarded for any additional functionality, or improvements that are added (simple client-side validation with feedback, for example).
 
@@ -50,7 +60,9 @@ The final code doesn't need to process any data, or interact with an API but bon
 
 The code for this challenge should be submitted via a Codepen.
 
-### For my pen see: [pen](http://codepen.io/anon/pen/qdZdag)
+### For my test see: [pen](http://codepen.io/anon/pen/qdZdag)
+
+----
 
 ## Challenge 2 - A simple wallet application using Angular.js
 
@@ -71,20 +83,20 @@ The wallet should show a total, displaying how much money is currently in the wa
 
 5. The code should be hosted in a Git repository.
 
-6.  The method of adding or removing a value to the wallet can be via  separate inputs, or a single input with a select box for add/remove.
+6. The method of adding or removing a value to the wallet can be via  separate inputs, or a single input with a select box for add/remove.
 
 
 ### BONUS POINTS
 
--   Consider how large numbers of transactions will be handled. For  example, if a wallet was created a year ago, it could have hundreds, or thousands of deposits and withdrawals. How could these be displayed?
+- Consider how large numbers of transactions will be handled. For  example, if a wallet was created a year ago, it could have hundreds, or thousands of deposits and withdrawals. How could these be displayed?
 
--   Users may be able to have more than one wallet, with different currencies. How would these work, and be presented to the user?
+- Users may be able to have more than one wallet, with different currencies. How would these work, and be presented to the user?
 
--  Thinking of a typical bank or credit card organisation, many accounts will exist for many different users. External companies can make charge requests against each account, and transfers can be made between internal accounts. How could your application implement this?
+- Thinking of a typical bank or credit card organisation, many accounts will exist for many different users. External companies can make charge requests against each account, and transfers can be made between internal accounts. How could your application implement this?
 
--  Although this is a fairly entry-level exercise, we’ll be paying close attention to the style of your code, as well as its implementation, with extra marks being awarded for the bonus points above, consideration for the application’s appearance, UX and any intuitive extra features.
+- Although this is a fairly entry-level exercise, we’ll be paying close attention to the style of your code, as well as its implementation, with extra marks being awarded for the bonus points above, consideration for the application’s appearance, UX and any intuitive extra features.
 
--  That being said, it doesn't need to be a production ready, piece of art. Good luck!
+- That being said, it doesn't need to be a production ready, piece of art. Good luck!
 
 
 
@@ -108,11 +120,19 @@ The wallet should show a total, displaying how much money is currently in the wa
 
 ### State of the test
 
-I've used Twitter bootstrap to style the app and for the data persistence i've used local storage.
+I've used Twitter bootstrap to style the app and for the data persistence I've used local storage.
 
-* [ ] Add Transactions
+* [x] Add Transactions
 
-* [ ] Add Tests
+* [ ] Disallow the ability to have an over-draft!
+
+* [ ] Clear the inputs after the cash is deposited or withdrawn
+
+* [ ] Fix production build issue
+
+* [ ] Add Unit Tests
+
+* [ ] Add E2E Tests
 
 * [ ] Add different currencies
 

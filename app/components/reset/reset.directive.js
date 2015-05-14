@@ -23,14 +23,11 @@
                     console.log('reset');
 
                     Accounts.reset().then(function(result) {
-                        console.log('results: ', result);
-                        scope.update()(result.total);
-                        scope.data = result;
-
+                        console.log('reset::results: ', result);
+                        scope.update()(0);
                     }, function(error) {
                         console.log('error: ', error);
                     });
-
                 };
             }
         };

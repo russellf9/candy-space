@@ -21,8 +21,7 @@
 
                 // the function get the set of all qualifications
                 Accounts.getTotal().then(function(result) {
-                    console.log('results: ',result);
-                    //scope.onReceived()();
+                    console.log('A TOTAL ---- results: ',result);
                     scope.data = result;
                 }, function(error) {
                     console.log('error: ',error);
@@ -32,7 +31,13 @@
                 //  TODO we are trusting the data in the call use the getTotal function!
                 $rootScope.$on('Accounts::Update', function(event, result) {
                     console.log('update in total directive: ',result);
-                    scope.data = result;
+                    // NASTY not DRY!!
+                    Accounts.getTotal().then(function(result) {
+                        console.log('B TOTAL ---- results: ',result);
+                        scope.data = result;
+                    }, function(error) {
+                        console.log('error: ',error);
+                    });
                 });
 
 

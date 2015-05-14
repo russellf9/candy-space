@@ -33,7 +33,6 @@
 
                         Accounts.deposit(scope.amount).then(function(result) {
                             console.log('credit::results: ',result);
-                            //scope.onReceived()();
                             scope.data = result;
 
                             scope.update()(result);

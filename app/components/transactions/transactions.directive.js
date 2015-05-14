@@ -11,13 +11,7 @@
 
         var self = this;
 
-        this.getTransactions =  function() {
-            console.log('get transactions!');
-        };
-
         return {
-
-
             restrict: 'EA',
             scope: {
                 update: '&'
@@ -26,23 +20,21 @@
             link: function(scope) {
 
                 // watch for updates sent by the controller
-                //  TODO we are trusting the data in the call use the getTotal function!
                 $rootScope.$on('Accounts::Update', function(event, result) {
-                    console.log('update in transactions directive: ', result);
-                    scope.transactions = self.getTransactions();
+                    Accounts.getTransactions().then(function(data){
+                        console.log('\n----\nTransaction::getTransactions ( from update )- Result ', data + '\n----\n');
+                        scope.transactions = data;
+                    });
                 });
 
-                console.log('transactions!');
-                //TODO plugin function
+                //TODO plugin shared function?
 
-                self.getTransactions();
-
-                // the function get the set of all qualifications
-
+                Accounts.getTransactions().then(function(data){
+                    console.log('\n----\nTransaction::getTransactions ( from initial load ) - Result ', data + '\n----\n');
+                    scope.transactions = data;
+                });
             }
         };
-
-
     }
 
 })();

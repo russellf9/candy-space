@@ -124,9 +124,11 @@ I've used Twitter bootstrap to style the app and for the data persistence I've u
 
 * [x] Add Transactions
 
-* [ ] Disallow the ability to have an over-draft!
+* [x] Disallow the ability to have an over-draft!
 
-* [ ] Clear the inputs after the cash is deposited or withdrawn
+* [x] Clear the inputs after the cash is withdrawn
+
+* [ ] Clear the inputs after the cash is deposited
 
 * [ ] Fix production build issue
 

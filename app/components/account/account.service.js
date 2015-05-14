@@ -49,18 +49,28 @@
                 if (_accounts) {
 
                     var total = _accounts.total - sum;
-                    _accounts.total = total;
-                    // TODO create shared function
-                    // add transaction
-                    var date = new Date();
-                    var transaction = {type: 'debit', date: date, amount: sum, total: _accounts.total};
-                    _accounts.transactions.push(transaction);
-                    localStorageService.set('accounts', _accounts);
 
-                    // TODO handle error here...
-                    deferred.resolve(_accounts.total);
+                    // check if the withdraw will create an over-draft!
+                    if(total < 0) {
 
-                    return deferred.promise;
+                        // error
+                        console.log('Error - can`t have an overdraft!');
+                        deferred.resolve(_accounts.total);
+
+                    } else {
+
+                        _accounts.total = total;
+                        // TODO create shared function
+                        // add transaction
+                        var date = new Date();
+                        var transaction = {type: 'debit', date: date, amount: sum, total: _accounts.total};
+                        _accounts.transactions.push(transaction);
+                        localStorageService.set('accounts', _accounts);
+
+                        // TODO handle error here...
+                        deferred.resolve(_accounts.total);
+                    }
+
                 } else {
                     // else- not in cache
                     deferred.reject("Error: no data as yet ");

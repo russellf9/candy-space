@@ -1,5 +1,5 @@
 <div style="debit">
-    <form name="myForm" class="form-inline">
+    <form name="debitForm" class="form-inline">
         <div class="form-group">
             <label class="sr-only" for="withdrawal">Amount (in GBP)</label>
 
@@ -10,11 +10,11 @@
                 <div class="input-group-addon">.00</div>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary" ng-click="withdraw()">Withdraw cash</button>
+        <button type="submit" class="btn btn-primary" ng-click="withdraw(); reset();">Withdraw cash</button>
         <div role="alert">
-    <span class="error" ng-show="myForm.input.$error.required">
+    <span class="error" ng-show="debitForm.input.$error.required">
       Required!</span>
-    <span class="error" ng-show="myForm.input.$error.number">
+    <span class="error" ng-show="debitForm.input.$error.number">
       Not valid number!</span>
         </div>
     </form>

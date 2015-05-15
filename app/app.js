@@ -1,4 +1,4 @@
-angular.module('wallet-app', ['ui.router', 'wallet-app.total', 'wallet-app.accounts', 'wallet-app.debit', 'wallet-app.credit', 'wallet-app.reset', 'wallet-app.transactions', 'LocalStorageModule']).controller('Wallet', Wallet)
+angular.module('posts-app', ['ui.router', 'posts-app.posts', 'posts-app.services']).controller('Posts', Posts)
 
 
 .config(['$stateProvider', '$urlRouterProvider',
@@ -11,26 +11,15 @@ angular.module('wallet-app', ['ui.router', 'wallet-app.total', 'wallet-app.accou
             .state('home', {
                 url: '/',
                 templateUrl: 'components/home.html',
-                controllerAs: Wallet
+                controllerAs: Posts
             });
-    }])
-
-.config(function (localStorageServiceProvider) {
-    localStorageServiceProvider
-        .setPrefix('wallet-app');
-});
+    }]);
 
 
-function Wallet($rootScope) {
+function Posts($rootScope) {
 
     var vm = this;
-    console.log('Wallet!');
+    console.log('Posts!');
 
-    this.update = function(sum) {
-
-        console.log('controller update! ',sum);
-
-        $rootScope.$emit('Accounts::Update', sum);
-    }
 
 }

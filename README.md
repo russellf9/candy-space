@@ -54,7 +54,15 @@ UX - How many posts should be shown to the user at once, and how should they loa
 Please also provide a general overview of your approach. Just a brief explanation of your thoughts behind major technical decisions (e.g. I chose to use framework X because Y).
 
 
-### BONUS POINTS
+## Tools and frameworks
+
+- I've chosen Angular as it is my JS framework of choice and is perfect for making scalable Web Apps which need to use a REST api.
+
+- I'll use Node.js as it's part of my JS Web Stack
+
+- I'm using Twitter Bootstrap to create the UI elements
+
+
 
 
 

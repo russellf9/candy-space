@@ -34,15 +34,19 @@ Open `http://localhost:8080/` in Chrome
 
 ### Instructions
 
-To create a mobile web interface that allows the user to browse through text-only posts from users (data attached as CSV). The site should be responsive up to the resolution of a tablet. Desktop users should be redirected to http://www.candyspace.com
+- To create a mobile web interface that allows the user to browse through text-only posts from users (data attached as CSV).
 
-Name, email (clickable), text body and posted date should be visible on each post.
+- The site should be responsive up to the resolution of a tablet.
 
-Data should be stored on the backend and made accessible to the UI via a RESTful API. No security is required on the API.
+- Desktop users should be redirected to http://www.candyspace.com
 
-Feel free to use any technologies and methods you think are suitable and are comfortable with to achieve this task.
+- Name, email (clickable), text body and posted date should be visible on each post.
 
-Code should include a build process that converts source code into production ready files where applicable.
+- Data should be stored on the backend and made accessible to the UI via a RESTful API. No security is required on the API.
+
+- Feel free to use any technologies and methods you think are suitable and are comfortable with to achieve this task.
+
+- Code should include a build process that converts source code into production ready files where applicable.
 
 Things to consider:
 Tools and frameworks. (We believe in processes that allow us to rapidly develop and deploy web applications to the highest quality)

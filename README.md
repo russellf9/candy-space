@@ -69,6 +69,13 @@ Please also provide a general overview of your approach. Just a brief explanatio
 ### APP SCOPE
 
 
+- Posts - The `main` controller
+
+- Player? (need to think of the right name) - A Directive which holds and displays all the posts
+
+- PostsService - A service responsible for the CRUD operations on the data ( On the specs only the READ operation is required. )
+
+
 
 
 

@@ -67,11 +67,11 @@ Please also provide a general overview of your approach. Just a brief explanatio
 
 ### App Code
 
-- Posts - The `main` Angular Controller
+- `Posts` - The `main` Angular Controller
 
-- Posts.Directive - A Directive which holds and displays all the posts
+- `Posts.Directive` - A Directive which holds and displays all the posts
 
-- Posts.Service - A Service responsible for the CRUD operations on the data ( On the specs only the READ operation is required. )
+- `Posts.Service` - A Service responsible for the CRUD operations on the data ( On the specs only the READ operation is required. )
 
 
 ### Re-direct

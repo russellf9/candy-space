@@ -58,9 +58,8 @@ Please also provide a general overview of your approach. Just a brief explanatio
 - I'm using Twitter Bootstrap to add style to the UI elements
 
 - To parse the csv data I'm using [node-csvtojson](https://github.com/Keyang/node-csvtojson), perhaps not the ideal solution a stream might be better.
-(Also, for now I'm having a path issue.)
 
-- I'm using [Gulp] as my task runner
+- I'm using [Gulp](http://gulpjs.com) as my task runner as it fast, can be modular and gets everything done.
 
 - I'm using SASS as this is essential for writing cleaner and extensible CSS
 
@@ -68,12 +67,11 @@ Please also provide a general overview of your approach. Just a brief explanatio
 
 ### App Code
 
-
-- Posts - The `main` controller
+- Posts - The `main` Angular Controller
 
 - Posts.Directive - A Directive which holds and displays all the posts
 
-- Posts.Service - A service responsible for the CRUD operations on the data ( On the specs only the READ operation is required. )
+- Posts.Service - A Service responsible for the CRUD operations on the data ( On the specs only the READ operation is required. )
 
 
 ### Re-direct

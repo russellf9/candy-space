@@ -16,10 +16,21 @@ angular.module('posts-app', ['ui.router', 'posts-app.posts', 'posts-app.services
     }]);
 
 
+// for now a completely `flat` controller, It could have the responsibility of handling updates
 function Posts($rootScope) {
-
     var vm = this;
-    console.log('Posts!');
-
-
 }
+
+(function() {
+    // a simple JS function to re-direct the page
+    function detectUserAgent() {
+        var isMobile = navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i);
+
+        if(!isMobile) {
+            window.location = "http://www.candyspace.com";
+        }
+    }
+
+    detectUserAgent()
+
+})();

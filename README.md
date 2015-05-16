@@ -48,7 +48,7 @@ Open `http://localhost:8080/` in Chrome
 
 - Code should include a build process that converts source code into production ready files where applicable.
 
-Things to consider:
+**Things to consider:**
 
 Tools and frameworks. (We believe in processes that allow us to rapidly develop and deploy web applications to the highest quality)
 
@@ -63,24 +63,24 @@ Please also provide a general overview of your approach. Just a brief explanatio
 
 - I'll use Node.js as it's part of my JS Web Stack
 
-- I'm using Twitter Bootstrap to create the UI elements
+- I'm using Twitter Bootstrap to add style to the UI elements
 
 - To parse the csv data I'm using [node-csvtojson](https://github.com/Keyang/node-csvtojson), perhaps not the ideal solution a stream might be better.
 (Also, for now I'm having a path issue.)
 
 
 
-### APP SCOPE
+### App Scope
 
 
 - Posts - The `main` controller
 
-- Player? (need to think of the right name) - A Directive which holds and displays all the posts
+- Posts.Directive - A Directive which holds and displays all the posts
 
-- PostsService - A service responsible for the CRUD operations on the data ( On the specs only the READ operation is required. )
+- Posts.Service - A service responsible for the CRUD operations on the data ( On the specs only the READ operation is required. )
 
 
-
+### Re-direct
 
 
 ### State of the test

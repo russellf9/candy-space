@@ -16,25 +16,6 @@ section {
   padding: 0.5em;
 }
 
-.qualifications {
-  display: block;
-  padding-left: 2em;
-
-  ul {
-    list-style: none;
-    border-bottom: 1px solid $accent-color;
-    border-right: 1px solid $accent-color;
-  }
-  //  style the list items so they stand out
-  li {
-    padding-top: 0.5em;
-    padding-left: 1em;
-    padding-bottom: 0.5em;
-
-    border-bottom: 1px solid $accent-color;
-  }
-}
-
 // used for the alternate list items
 .odd {
   background-color: $primary-color;
@@ -44,35 +25,34 @@ section {
   background-color: $divider-color;
 }
 
+// general Ui styles
+.inline {
+  display: inline;
+}
+
 // for active clickable items
 .active {
   cursor: pointer;
 }
 
-// so the list backgrounds don't stretch too far
-.panel-body {
-  width: 100%;
-}
 
+// PANELS
+
+// So the titles are lighter and vertically aligned
 .panel-heading {
   h3 {
     //    border: solid 1px red;
     vertical-align: middle;
     margin-bottom: 0;
     color: $offWhite;
-
   }
-
   p {
     color: $offWhite;
   }
 }
 
-// general
 
-.inline {
-  display: inline;
-}
+// POSTS
 
 //  border: solid 1px $primary-color;
 // adjust so the panel fits it's parent
@@ -89,6 +69,8 @@ section {
   color: $offWhite;
 }
 
+
+// add new link decoration for the email
 .posts {
   a:link {
     text-decoration: none;

@@ -88,3 +88,21 @@ section {
     text-decoration: none;
   }
 }
+
+
+@media screen and (orientation: portrait) {
+  .tab-pane {
+    height: calc(90vh - 90px);
+    overflow-y:scroll;
+//    background-color: lightblue;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .tab-pane {
+    height: calc(65vw - 90px);
+    overflow-y:scroll;
+//    background-color: yellow;
+  }
+}
+

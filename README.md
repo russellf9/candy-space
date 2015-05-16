@@ -1,4 +1,4 @@
-Candy Store Code Challenge
+# CandyStore Code Challenge
 
 
 ## Installation
@@ -49,8 +49,11 @@ Open `http://localhost:8080/` in Chrome
 - Code should include a build process that converts source code into production ready files where applicable.
 
 Things to consider:
+
 Tools and frameworks. (We believe in processes that allow us to rapidly develop and deploy web applications to the highest quality)
+
 UX - How many posts should be shown to the user at once, and how should they load more?
+
 Please also provide a general overview of your approach. Just a brief explanation of your thoughts behind major technical decisions (e.g. I chose to use framework X because Y).
 
 

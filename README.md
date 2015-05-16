@@ -62,7 +62,8 @@ Please also provide a general overview of your approach. Just a brief explanatio
 
 - I'm using Twitter Bootstrap to create the UI elements
 
-
+- To parse the csv data I'm using [node-csvtojson](https://github.com/Keyang/node-csvtojson), perhaps not the ideal solution a stream might be better.
+(Also, for now I'm having a path issue.)
 
 
 

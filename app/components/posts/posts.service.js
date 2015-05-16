@@ -15,7 +15,7 @@
 
             getPosts: function() {
 
-                console.log('\n----\nAccounts::getPosts!');
+                console.log('\n----\nPostsService::getPosts!');
                 return $http.get('/posts').then(function(result) {
                     return result.data;
                 });

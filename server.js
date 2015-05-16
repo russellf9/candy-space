@@ -18,6 +18,7 @@ require('./devServer/routes')(app); // configure our routes
 
 
 //var posts
+var _posts = {};
 
 
 // more routes for our API will happen here
@@ -35,10 +36,30 @@ app.use('/api', router);
 
 // gets the posts
 app.get('/posts', function(req,res){
-    res.json({data:'todo'});
+    res.json(_posts);
 });
 
+// USING A PLUGIN TO TRANSFORM THE CSV DATA -------------------------------
+// Using `csvtojson` to generate A JSON object
+//Converter Class
+var Converter=require("csvtojson").core.Converter;
+var fs=require("fs");
 
+
+// TODO need a correct path structure for the data
+var csvFileName="./data/post-data.csv";
+var fileStream=fs.createReadStream(csvFileName);
+//new converter instance
+var param={};
+var csvConverter=new Converter(param);
+
+//end_parsed will be emitted once parsing finished
+csvConverter.on("end_parsed",function(jsonObj){
+    _posts = jsonObj;
+});
+
+//read from file
+fileStream.pipe(csvConverter);
 
 // start app ===============================================
 app.listen(port);                                     // startup our app at http://localhost:8080

@@ -50,7 +50,7 @@ var fs=require("fs");
 var csvFileName="./data/post-data.csv";
 var fileStream=fs.createReadStream(csvFileName);
 //new converter instance
-var param={};
+var param={delimiter:'|', checkType:true};
 var csvConverter=new Converter(param);
 
 //end_parsed will be emitted once parsing finished

@@ -8,21 +8,15 @@
 
     angular.module('posts-app.services', []).service('PostsService', ['$q', '$http', function($q, $http) {
 
-        // TODO need a getter for this property to work correctly!
+        // TODO save the property for re-use
         var _posts;
 
         return {
-
             getPosts: function() {
-
-                console.log('\n----\nPostsService::getPosts!');
                 return $http.get('/posts').then(function(result) {
                     return result.data;
                 });
-
             }
-
-
         };
     }
     ]);

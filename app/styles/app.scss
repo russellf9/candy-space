@@ -51,24 +51,58 @@ section {
 
 // so the list backgrounds don't stretch too far
 .panel-body {
-  width: 75%;
-}
-
-.panel-body-transactions {
   width: 100%;
 }
 
-//TOTAL
+.panel-heading {
+  h3 {
+    //    border: solid 1px red;
+    vertical-align: middle;
+    margin-bottom: 0;
+    color: $offWhite;
 
-.total {
-  width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  //border: solid 1px $primary-color;
+  }
+
+  p {
+    color: $offWhite;
+  }
 }
 
-// TRANSACTIONS
-.transactions {
-  width: 100%;
+// general
+
+.inline {
+  display: inline;
+}
+
 //  border: solid 1px $primary-color;
+// adjust so the panel fits it's parent
+.posts {
+  padding: 0;
+}
+
+.post-date {
+  text-align: right;
+  margin-bottom: 0;
+}
+
+.post-title {
+  color: $offWhite;
+}
+
+.posts {
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    color: $primary-color;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $primary-color;
+    text-decoration: none;
+  }
+  a:active {
+    color: $primary-color;
+    text-decoration: none;
+  }
 }

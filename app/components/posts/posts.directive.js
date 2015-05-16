@@ -20,20 +20,12 @@
 
                 console.log('Posts directive!');
 
-                scope.parseData  = function(obj) {
-                    console.log('Posts parseData | string: ', obj);
-
-                    return "OK " + string;
-                };
-
-                // the function get the set of all qualifications
+                // the function get all of the posts
                 PostsService.getPosts().then(function(result) {
-                    console.log('A POSTS ---- results: ',result);
                     scope.posts = result;
                 }, function(error) {
                     console.log('error: ',error);
                 });
-
             }
         };
     }

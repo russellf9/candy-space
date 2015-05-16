@@ -27,7 +27,7 @@ function Posts($rootScope) {
         var isMobile = navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i);
 
         if(!isMobile) {
-            window.location = "http://www.candyspace.com";
+           // window.location = "http://www.candyspace.com";
         }
     }
 

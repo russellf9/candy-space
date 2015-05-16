@@ -12,14 +12,6 @@ I've used the [healthy-gulp-angular](https://github.com/paislee/healthy-gulp-ang
 
 (The original healthy-gulp-angular README can be found here: [healthy-angular-README.md](healthy-angular-README.md) )
 
-**Note:**
-
-
-
-
-## Live site
-
-
 
 ## Running the app
 
@@ -68,9 +60,13 @@ Please also provide a general overview of your approach. Just a brief explanatio
 - To parse the csv data I'm using [node-csvtojson](https://github.com/Keyang/node-csvtojson), perhaps not the ideal solution a stream might be better.
 (Also, for now I'm having a path issue.)
 
+- I'm using [Gulp] as my task runner
 
+- I'm using SASS as this is essential for writing cleaner and extensible CSS
 
-### App Scope
+- Project structure - I try and make all the elements (JS and SASS) as modular as possible.
+
+### App Code
 
 
 - Posts - The `main` controller
@@ -82,12 +78,24 @@ Please also provide a general overview of your approach. Just a brief explanatio
 
 ### Re-direct
 
+I'm using a JS solution for this, as the `navigator.userAgent` would be more reliable than doing a test on the CSS style or screen width, as tablets are getting larger than desktops!
+
 
 ### State of the test
 
-I've used Twitter bootstrap to style the app.
+- The design and UI is very plain for now. (It would be relatively easy to create new `palette.sass` file to modify the colours
+
+- Data - At present all the data is being loaded at once. It would be be beneficial to use some sort of pagination to load the data in say groups of ten.
+
+- There is an issue with the `build-app-prod` script, the Angular code is not being minified properly. Would need something like [ng-annotate](https://github.com/olov/ng-annotate) to be run in the Gulp task.
+
+- Also, I assume a for the scripts to be deployed and work a node server would have to be set up client side.
+
+### TODO
 
 * [ ] Fix production build issue
+
+* [ ] Add pagination
 
 * [ ] Add Unit Tests
 

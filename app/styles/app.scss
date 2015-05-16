@@ -54,7 +54,6 @@ section {
 
 // POSTS
 
-//  border: solid 1px $primary-color;
 // adjust so the panel fits it's parent
 .posts {
   padding: 0;
@@ -89,12 +88,11 @@ section {
   }
 }
 
-
+// ues media queries to fit a scrollable window in the maximum available space
 @media screen and (orientation: portrait) {
   .tab-pane {
     height: calc(90vh - 90px);
     overflow-y:scroll;
-//    background-color: lightblue;
   }
 }
 
@@ -102,7 +100,6 @@ section {
   .tab-pane {
     height: calc(65vw - 90px);
     overflow-y:scroll;
-//    background-color: yellow;
   }
 }
 

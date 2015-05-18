@@ -85,13 +85,13 @@ I'm using a JS solution for this, as the `navigator.userAgent` would be more rel
 
 - Data - At present all the data is being loaded at once. It would be be beneficial to use some sort of pagination to load the data in say groups of ten.
 
-- There is an issue with the `build-app-prod` script, the Angular code is not being minified properly. Would need something like [ng-annotate](https://github.com/olov/ng-annotate) to be run in the Gulp task.
+- ~~There is an issue with the `build-app-prod` script, the Angular code is not being minified properly. Would need something like [ng-annotate](https://github.com/olov/ng-annotate) to be run in the Gulp task.~~
 
 - Also, I assume a for the scripts to be deployed and work a node server would have to be set up client side.
 
 ### TODO
 
-* [ ] Fix production build issue
+* [x] Fix production build issue
 
 * [ ] Add pagination
 

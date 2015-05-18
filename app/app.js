@@ -33,6 +33,6 @@ function Posts($rootScope) {
         }
     }
 
-    detectUserAgent()
+    detectUserAgent();
 
 })();

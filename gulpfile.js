@@ -98,7 +98,7 @@ pipes.scriptedPartials = function() {
         .pipe(plugins.htmlhint.failReporter())
         .pipe(plugins.htmlmin({collapseWhitespace: true, removeComments: true}))
         .pipe(plugins.ngHtml2js({
-            moduleName: "healthyGulpAngularApp"
+            moduleName: "posts-app"
         }));
 };
 
@@ -163,7 +163,7 @@ pipes.builtIndexProd = function() {
         .pipe(plugins.inject(vendorScripts, {relative: true, name: 'bower'}))
         .pipe(plugins.inject(appScripts, {relative: true}))
         .pipe(plugins.inject(appStyles, {relative: true}))
-        .pipe(plugins.htmlmin({collapseWhitespace: true, removeComments: true}))
+        //.pipe(plugins.htmlmin({collapseWhitespace: true, removeComments: true}))
         .pipe(gulp.dest(paths.distProd));
 };
 

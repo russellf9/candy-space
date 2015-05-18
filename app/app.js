@@ -21,6 +21,8 @@ function Posts($rootScope) {
     var vm = this;
 }
 
+Posts.$inject = ['$rootScope'];
+
 (function() {
     // a simple JS function to re-direct the page
     function detectUserAgent() {
@@ -28,7 +30,7 @@ function Posts($rootScope) {
 
         if (!isMobile) {
             // Note: Comment out this line for testing on Desktop
-            window.location = "http://www.candyspace.com";
+            //window.location = "http://www.candyspace.com";
         }
     }
 

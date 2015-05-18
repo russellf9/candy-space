@@ -29,5 +29,6 @@
             }
         };
     }
+    Posts.$inject = ['PostsService'];
 
 })();

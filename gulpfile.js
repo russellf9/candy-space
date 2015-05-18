@@ -6,6 +6,7 @@ var bowerFiles = require('main-bower-files');
 var print = require('gulp-print');
 var Q = require('q');
 var karma = require('gulp-karma');
+var ngAnnotate = require('gulp-ng-annotate');
 
 // == PATH STRINGS ========
 
@@ -41,6 +42,7 @@ pipes.minifiedFileName = function() {
 
 pipes.validatedAppScripts = function() {
     return gulp.src(paths.scripts)
+        .pipe(ngAnnotate())
         .pipe(plugins.jshint())
         .pipe(plugins.jshint.reporter('jshint-stylish'));
 };

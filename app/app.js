@@ -21,7 +21,6 @@ function Posts($rootScope) {
     var vm = this;
 }
 
-Posts.$inject = ['$rootScope'];
 
 (function() {
     // a simple JS function to re-direct the page

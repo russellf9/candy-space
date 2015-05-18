@@ -1,4 +1,4 @@
-# CandyStore Code Challenge
+# Candyspace Code Challenge
 
 
 ## Installation
